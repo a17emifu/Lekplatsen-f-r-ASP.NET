@@ -22,5 +22,13 @@ namespace test.Data
             var likeDislike = GetData<LikeDislikeDto>(endPoint);
             return likeDislike;
         }
+
+        public Task<List<LikeDislikeDto>> GetLikeDislikes(string param)
+        {
+            string endPoint = $"{baseUrl}{param}";
+            var likeDislikes = GetData<List<LikeDislikeDto>>(endPoint);
+            return likeDislikes;
+            
+        }
     }
 }

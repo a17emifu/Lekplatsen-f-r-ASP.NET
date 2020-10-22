@@ -9,6 +9,7 @@ namespace test.Data
     public interface ILikeDislikeRepository
     {
 
-        Task<LikeDislikeDto> GetLikeDislike(string imbid);
+        Task<LikeDislikeDto> GetLikeDislike(string param);
+        Task<List<LikeDislikeDto>> GetLikeDislikes(string param);
     }
 }

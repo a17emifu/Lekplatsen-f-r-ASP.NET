@@ -35,13 +35,14 @@ namespace test.Data
 
         }
 
-        public Task<List<MovieDto>> GetMovies(List<LikeDislikeDto> top10lists)
+
+        public List<Movie> GetMovieIds(List<LikeDislikeDto> top10lists)
         {
-            TakeImdbIds(top10lists);
-            throw new NotImplementedException();
+            var movies = TakeImdbIds(top10lists);
+            return movies;
         }
 
-        private void TakeImdbIds(List<LikeDislikeDto> top10lists)
+        private List<Movie> TakeImdbIds(List<LikeDislikeDto> top10lists)
         {
             movieTitles = new List<Movie>();
             
@@ -53,7 +54,20 @@ namespace test.Data
                 };
                 movieTitles.Add(movie);
             }
+            return movieTitles;
             
+        }
+
+        public async Task<List<MovieDto>> GetMoviesByImdbIds(List<Movie> movieIds)
+        {
+            List<MovieDto> movies = new List<MovieDto>();
+            foreach (var movieId in movieIds)
+            {
+                var movie = await GetMoviebyImdbId(movieId.imdbID);
+                movies.Add(movie);
+            }
+
+            return movies;
         }
     }
 }

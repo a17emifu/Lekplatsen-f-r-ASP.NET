@@ -9,7 +9,6 @@ namespace test.Data
     {
         public string baseUrl { get; set; }
         Task<T> GetData<T>(string endpoint);
-        Task<List<T>> GetDatas<T>(string endpoint);
  
 
     }

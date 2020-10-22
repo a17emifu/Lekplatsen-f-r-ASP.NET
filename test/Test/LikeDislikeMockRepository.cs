@@ -25,5 +25,10 @@ namespace test.Test
             await Task.Delay(0);
             return result;
         }
+
+        public Task<List<LikeDislikeDto>> GetLikeDislikes(string param)
+        {
+            return null;
+        }
     }
 }

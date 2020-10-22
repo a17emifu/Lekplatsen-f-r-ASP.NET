@@ -8,7 +8,7 @@ using test.Models.DTO;
 
 namespace test.Test
 {
-    public class MovieMockRepository : BaseMockRepository, IMovieRepository
+    public class MovieMockRepository : BaseMockRepository //IMovieRepository
     {
         
        
@@ -17,11 +17,14 @@ namespace test.Test
             SetBasePath(webHostEnvironment);
 
         }
-        public Task<MovieDto> GetMovie(string imbid) {
+
+        public Task<MovieDto> GetMoviebyImdbId(string imdbid)
+        {
             return null;
+
         }
 
-        public async Task<List<MovieDto>> GetMovies(string imbid)
+        public async Task<List<MovieDto>> GetMovies(List<LikeDislikeDto> top10lists)
         {
             string testFile = "movies.json";
             var result = GetTestData<List<MovieDto>>(testFile);
