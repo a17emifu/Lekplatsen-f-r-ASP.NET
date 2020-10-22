@@ -30,14 +30,14 @@ namespace test.Controllers
 
         public async Task<IActionResult> Movie()
         {
-            string imbId = "tt4729430";
+            //string imbId = "tt4729430";
             string param = "toplist?type=rating&count=10";
             var likeDislikesTop10 = await likeDislikeRepository.GetLikeDislikes(param);
             var top10MoviesId = movieRepository.GetMovieIds(likeDislikesTop10);
             var top10Movies = await movieRepository.GetMoviesByImdbIds(top10MoviesId);
 
             //var likeDislike = await likeDislikeRepository.GetLikeDislike(imbId);
-            var model = new MovieViewModel(top10Movies, likeDislikesTop10[0]);
+            var model = new TopMoviesViewModel(top10Movies, likeDislikesTop10[0]);
             return View(model);
         }
     }

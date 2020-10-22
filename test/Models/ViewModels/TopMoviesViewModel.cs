@@ -6,13 +6,13 @@ using test.Models.DTO;
 
 namespace test.Models.ViewModels
 {
-    public class MovieViewModel
+    public class TopMoviesViewModel
     {
         public List<MovieDto> Movies { get; set; }
         public LikeDislikeDto LikeDislikeDto { get; set; }
 
 
-        public MovieViewModel(List<MovieDto> movies, LikeDislikeDto likeDislike)
+        public TopMoviesViewModel(List<MovieDto> movies, LikeDislikeDto likeDislike)
         {
             Movies = movies;
             LikeDislikeDto = likeDislike;
