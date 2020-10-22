@@ -28,5 +28,9 @@ namespace test.Data
             }
         }
 
+        public Task<T> PostData<T>(string endpoint)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

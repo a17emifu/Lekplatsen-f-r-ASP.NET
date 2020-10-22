@@ -9,7 +9,7 @@ namespace test.Data
     {
         public string baseUrl { get; set; }
         Task<T> GetData<T>(string endpoint);
- 
+        Task<T> PostData<T>(string endpoint);
 
     }
 }
