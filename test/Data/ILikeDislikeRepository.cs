@@ -11,5 +11,8 @@ namespace test.Data
 
         Task<LikeDislikeDto> GetLikeDislike(string param);
         Task<List<LikeDislikeDto>> GetLikeDislikes(string param);
+
+        //TO DO: PostLike(string param);    FÖR GILLA_KNAPP
+        //TO DO: PostDislike(string param);     FÖR OGILLA KNAPP
     }
 }
