@@ -8,33 +8,36 @@
             <div class="filter">
 
                 <div id="top-film-info" style="background-image: url(@Model.Movies[0].Poster)" ; class="d-flex flex-column align-items-start">
-                    <div class="category">
-                        <span>@Model.Movies[0].Genre</span>
-                    </div><!-- /.category -->
-                    <h1 id="top-film-title">@Model.Movies[0].Title</h1>
-                    <div class="d-inline-flex flex-row flex-nowrap">
-                        <img id="clock" src="../assets/images/clock.png" alt="">
-                        <div>
-                            <span id="top-film-time">@Model.Movies[0].Runtime</span>
-                            <span>|</span>
-                            <span id="top-film-rate">@Model.Movies[0].Rated</span>
+                    <form asp-action="Movie" asp-controller="start"method="get">
+                        @Html.HiddenFor(model => model.Movies[0].imdbID)
+                        <input type="hidden" name="imdbID" value="@Model.Movies[0].imdbID" />
+                        <div class="category">
+                            <span>@Model.Movies[0].Genre</span>
+                        </div><!-- /.category -->
+                        <h1 id="top-film-title">@Model.Movies[0].Title</h1>
+                        <div class="d-inline-flex flex-row flex-nowrap">
+                            <img id="clock" src="../assets/images/clock.png" alt="">
+                            <div>
+                                <span id="top-film-time">@Model.Movies[0].Runtime</span>
+                                <span>|</span>
+                                <span id="top-film-rate">@Model.Movies[0].Rated</span>
+                            </div>
                         </div>
-                    </div>
-                    <div id="top-film-like-dislike" class=" d-flex flex-row">
-                        <div class="like">
-                            <img src="../assets/images/like.png" alt="">
-                            <span>@Model.LikeDislikeDto.numberOfLikes</span><span> Likes</span>
-</div><!-- /.like -->
-                        <div class="dislike">
-                            <img src="../assets/images/like.png" alt="">
-                            <span>@Model.LikeDislikeDto.numberOfDislikes</span><span> Dislikes</span>
-                        </div><!-- /.dislike -->
-                    </div><!-- /#top-film-like-dislike -->
-                    <span id="top-film-actors">@Model.Movies[0].Actors</span>
-                    <span id="top-film-directors">@Model.Movies[0].Director</span>
+                        <div id="top-film-like-dislike" class=" d-flex flex-row">
+                            <div class="like">
+                                <img src="../assets/images/like.png" alt="">
+                                <span>@Model.LikeDislikeDto.numberOfLikes</span><span> Likes</span>
+                            </div><!-- /.like -->
+                            <div class="dislike">
+                                <img src="../assets/images/like.png" alt="">
+                                <span>@Model.LikeDislikeDto.numberOfDislikes</span><span> Dislikes</span>
+                            </div><!-- /.dislike -->
+                        </div><!-- /#top-film-like-dislike -->
+                        <span id="top-film-actors">@Model.Movies[0].Actors</span>
+                        <span id="top-film-directors">@Model.Movies[0].Director</span>
 
-                    <button id="film-detail-btn" class="btn btn-secondary ">Detaljer ></button>
-
+                        <button id="film-detail-btn" type="submit" class="btn btn-secondary ">Detaljer ></button>
+                    </form>
                 </div>
             </div><!-- /.top-film -->
         </div><!-- /.filter -->

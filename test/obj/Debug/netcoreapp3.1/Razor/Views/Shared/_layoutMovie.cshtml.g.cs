@@ -27,9 +27,10 @@ using test.Models.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ae56388f2e820018fc66935cab71220030a1aec8", @"/Views/Shared/_layoutMovie.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"117e1f59325ce50b0915b756ed34db05c4713f50", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"31e2c2d8a1b5de7b267422fbf6fd29c04d484f48", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__layoutMovie : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-inline my-2 my-lg-0 "), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -52,11 +53,13 @@ using test.Models.ViewModels;
         }
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.HeadTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_HeadTagHelper;
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae56388f2e820018fc66935cab71220030a1aec83307", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae56388f2e820018fc66935cab71220030a1aec83954", async() => {
                 WriteLiteral(@"
     <!-- Font -->
     <link href=""https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap"" rel=""stylesheet"">
@@ -89,7 +92,7 @@ using test.Models.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae56388f2e820018fc66935cab71220030a1aec85147", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae56388f2e820018fc66935cab71220030a1aec85794", async() => {
                 WriteLiteral("\r\n    <!-- NAV -->\r\n    <header>\r\n        <nav class=\"navbar navbar-expand-lg navbar-dark\">\r\n            <div>\r\n                <a class=\"navbar-brand\" href=\"#\">\r\n                    <img class=\"mr-2\" src=\"./assets/images/Logo.png\"");
                 BeginWriteAttribute("alt", " alt=\"", 1132, "\"", 1138, 0);
                 EndWriteAttribute();
@@ -105,16 +108,28 @@ using test.Models.ViewModels;
                     <!-- Kan lägga till ytterligare menyitem -->
                 </ul>
 
-                <form class=""form-inline my-2 my-lg-0 "">
+                ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae56388f2e820018fc66935cab71220030a1aec87061", async() => {
+                    WriteLiteral(@"
                     <img class=""mr-2"" src=""../assets/images/search.png"" alt=""search-icon"">
                     <input class=""form-control mr-sm-2"" type=""search"" placeholder=""Search"" aria-label=""Search"">
                     <button class=""btn btn-secondary my-2 my-sm-0"" type=""submit"">Sök</button>
-                </form>
-
-            </div>
-        </nav>
-    </header>
-    ");
+                ");
+                }
+                );
+                __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper>();
+                __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper);
+                __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper>();
+                __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_0);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                WriteLiteral("\r\n\r\n            </div>\r\n        </nav>\r\n    </header>\r\n    ");
 #nullable restore
 #line 50 "C:\Users\Emiko\source\repos\Lekplatsen-f-r-ASP.NET\test\Views\Shared\_layoutMovie.cshtml"
 Write(RenderBody());

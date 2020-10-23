@@ -27,7 +27,7 @@ using test.Models.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f323f8c8b640362387bde617e0aefbd0dcb8cc50", @"/Views/Shared/_layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"117e1f59325ce50b0915b756ed34db05c4713f50", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"31e2c2d8a1b5de7b267422fbf6fd29c04d484f48", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden

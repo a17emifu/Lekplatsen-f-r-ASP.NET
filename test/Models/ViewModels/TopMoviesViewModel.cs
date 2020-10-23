@@ -11,6 +11,7 @@ namespace test.Models.ViewModels
         public List<MovieDto> Movies { get; set; }
         public LikeDislikeDto LikeDislikeDto { get; set; }
 
+        public TopMoviesViewModel() { }
 
         public TopMoviesViewModel(List<MovieDto> movies, LikeDislikeDto likeDislike)
         {

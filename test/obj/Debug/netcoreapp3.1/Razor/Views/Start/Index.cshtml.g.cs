@@ -27,7 +27,7 @@ using test.Models.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e70b265cb9f4bd2d3a0e2b60fb02b027d3b6a805", @"/Views/Start/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"117e1f59325ce50b0915b756ed34db05c4713f50", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"31e2c2d8a1b5de7b267422fbf6fd29c04d484f48", @"/Views/_ViewImports.cshtml")]
     public class Views_Start_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<LikeDislikeDto>
     {
         #pragma warning disable 1998
